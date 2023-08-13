@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         {/* Remove the default content */}
-        <h1>Weather Forecast App</h1>
+        <h1>Weather Forecast </h1>
         <AddressForm onSubmit={handleAddressSubmit} />
         <WeatherForecast />
       </header>

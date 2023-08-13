@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  min-height: 100vh; /* Ensure the background covers the full viewport height */
+  background: linear-gradient(to bottom, #ffffd6, #2e3193);
+  /* Other existing styles for your App component */
 }
 
 .App-logo {
@@ -14,14 +17,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #ffffd6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #140e17;
 }
 
 .App-link {

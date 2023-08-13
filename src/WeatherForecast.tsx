@@ -27,15 +27,9 @@ const WeatherForecast: React.FC = () => {
     }
   }, [address]);
 
+  //display all data for the weather forcast in here. This is the display section !!!!!!!!!!!
   return (
     <div>
-      <h1>Weather Forecast</h1>
-      <input
-        type="text"
-        placeholder="Enter address"
-        value={address}
-        onChange={(e) => setAddress(e.target.value)}
-      />
       {weatherData && (
         <div>
           {/* Display the weather forecast data here */}
