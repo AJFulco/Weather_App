@@ -1,23 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import WeatherForecast from './WeatherForecast'; // Import your WeatherForecast component
+import AddressForm from './AddressForm'; // Import your AddressForm component
 
 function App() {
+  const handleAddressSubmit = (address: string) => {
+    // Handle the address submission, e.g., update state or perform other actions
+    console.log(`Address submitted: ${address}`);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {/* Remove the default content */}
+        <h1>Weather Forecast </h1>
+        <AddressForm onSubmit={handleAddressSubmit} />
+        <WeatherForecast />
       </header>
     </div>
   );
