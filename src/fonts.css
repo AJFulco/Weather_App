@@ -1,0 +1,12 @@
+/*This file handles reading the fonts from the fonts folder to be used in the application*/
+
+/* fonts.css */
+@font-face {
+    font-family: 'MyFont';
+    src: url('./my-font.woff2') format('woff2'),
+         url('./my-font.woff') format('woff');
+    /* Add more font formats if needed */
+  }
+  
+  /* Additional styles and classes can go here */
+  
