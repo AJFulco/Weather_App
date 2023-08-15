@@ -1,12 +1,11 @@
-// src/index.tsx
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import WeatherApp from './WeatherApp'; // Provide the correct path
+import './index.css'; // Import your styles if needed
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <WeatherApp />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,24 +1,37 @@
-import React from 'react';
-import './App.css';
-import WeatherForecast from './WeatherForecast'; // Import your WeatherForecast component
-import AddressForm from './AddressForm'; // Import your AddressForm component
+// src/App.tsx
+import React, { useState } from 'react';
+import AddressForm from './components/AddressForm';
 
-function App() {
-  const handleAddressSubmit = (address: string) => {
-    // Handle the address submission, e.g., update state or perform other actions
-    console.log(`Address submitted: ${address}`);
+const App = () => {
+  const [forecastData, setForecastData] = useState<any>(null);
+
+  const fetchWeatherForecast = async (address: string) => {
+    try {
+      const response = await fetch(`https://localhost:7114/api/weather?address=${address}`);
+      if (response.ok) {
+        const data = await response.json();
+        setForecastData(data);
+      } else {
+        // Handle error response
+      }
+    } catch (error) {
+      // Handle fetch error
+    }
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        {/* Remove the default content */}
-        <h1>Weather Forecast </h1>
-        <AddressForm onSubmit={handleAddressSubmit} />
-        <WeatherForecast />
-      </header>
+    <div>
+      <h1>Weather Forecast App</h1>
+      <AddressForm onSubmit={fetchWeatherForecast} />
+      {forecastData && (
+        <div>
+          <p>Latitude: {forecastData.latitude}</p>
+          <p>Longitude: {forecastData.longitude}</p>
+          {/* Display other forecast data */}
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default App;
