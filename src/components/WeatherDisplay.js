@@ -1,9 +1,9 @@
-// ExampleComponent.js
+// WeatherDisplay.js
 
 import React, { useState } from 'react';
 import { getWeatherForecast } from './ApiService';
 
-function ExampleComponent() {
+function WeatherDisplay() {
   const [weatherData, setWeatherData] = useState(null);
   const [address, setAddress] = useState('');
 
@@ -27,7 +27,7 @@ function ExampleComponent() {
 
       {weatherData && (
         <div>
-          <h2>Weather Forecast</h2>
+          <h2>Your Mom's A$$</h2>
           <p>Latitude: {weatherData.Latitude}</p>
           <p>Longitude: {weatherData.Longitude}</p>
           <p>Temperature: {weatherData.Temperature}</p>
@@ -38,4 +38,4 @@ function ExampleComponent() {
   );
 }
 
-export default ExampleComponent;
+export default WeatherDisplay;
