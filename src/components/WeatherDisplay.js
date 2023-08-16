@@ -23,11 +23,11 @@ function WeatherDisplay() {
         value={address}
         onChange={(e) => setAddress(e.target.value)}
       />
-      <button onClick={handleFetchData}>Fetch Weather</button>
+      <button onClick={handleFetchData}>Fetch Deez Nuts</button>
 
       {weatherData && (
         <div>
-          <h2>Your Mom's A$$</h2>
+          <h2>Weather Results</h2>
           <p>Latitude: {weatherData.Latitude}</p>
           <p>Longitude: {weatherData.Longitude}</p>
           <p>Temperature: {weatherData.Temperature}</p>
