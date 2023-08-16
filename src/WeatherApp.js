@@ -34,29 +34,18 @@ function WeatherApp() {
         <button onClick={handleFetchData} className="search-button">
           Fetch Weather
         </button>
-
-        {error ? (
-          <p className="error-message">{error}</p>
-        ) : (
-          <div className="weather-box">
-            {weatherData ? (
-              <>
-                <p>Temperature: {weatherData.Temperature}°F</p>
-                <img
-                  src={"https://example.com/weather-graphic-sunny.png"}
-                  alt="Weather Graphic"
-                  className="weather-graphic"
-                />
-                <p>Chance of Rain: {weatherData.ChanceOfRain}%</p>
-              </>
-            ) : (
-              <div className="placeholder"></div>
-            )}
-          </div>
-        )}
+        
+        {error && <p className="error-message">{error}</p>}
+        
+        {/* The following part was moved to the DayBox component */}
         <WeatherDisplay weatherData={weatherData} />
       </main>
       
+      <body>
+      
+
+      </body>
+
       <footer className="WeatherApp-footer">
         <p>Powered by A Hope and a Prayer!</p>
       </footer>
