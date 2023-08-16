@@ -1,5 +1,6 @@
 // WeatherDisplay.js
 
+//Display the weather results. 
 import React, { useState } from 'react';
 import { getWeatherForecast } from './ApiService';
 
@@ -18,20 +19,13 @@ function WeatherDisplay() {
 
   return (
     <div>
-      <input
-        type="text"
-        value={address}
-        onChange={(e) => setAddress(e.target.value)}
-      />
-      <button onClick={handleFetchData}>Fetch Deez Nuts</button>
-
       {weatherData && (
         <div>
           <h2>Weather Results</h2>
           <p>Latitude: {weatherData.Latitude}</p>
           <p>Longitude: {weatherData.Longitude}</p>
           <p>Temperature: {weatherData.Temperature}</p>
-          {/* Display other weather data properties here */}
+          {getWeatherForecast}
         </div>
       )}
     </div>

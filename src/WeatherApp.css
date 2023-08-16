@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ffffd6, #eaddc2);
+}
+
+/* Add the following CSS to your WeatherApp.css */
+.WeatherApp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Distribute space between header and main content */
+  min-height: 100vh;
+}
+
+.WeatherApp-footer {
+  background-color: #ffffd6;
+  width: 100%;
+  padding: 20px 0;
+  flex-shrink: 0; /* Prevent the footer from shrinking */
+}
+
+.WeatherApp-header {
+  
+  width: 100%;
+  padding: 20px 0;
+}
+
+.WeatherApp-main {
+  padding: 20px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.search-bar {
+  width: 100%; /* Make the search bar longer */
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+}
+
+.search-button {
+  width: 30%; /* Keep the button size the same */
+  padding: 10px;
+  background-color: #b6bfbf;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.weather-box {
+  padding-top: 10px;
+  width: 80px;
+  height: 100px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weather-graphic {
+  /* Style your graphic as needed */
+  max-width: 50px; /* Adjust the size as needed */
+  max-height: 50px; /* Adjust the size as needed */
+}
+
+.placeholder {
+  padding-top: 10px;
+  width: 80px;
+  height: 100px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}

@@ -1,7 +1,7 @@
 // ApiService.js
 
 // Define the base URL for your API
-const BASE_URL = 'https://localhost:7114/';
+const BASE_URL = 'http://localhost:5254/';
 
 // Define an asynchronous function to fetch weather forecast data from the API
 async function getWeatherForecast(address) {
