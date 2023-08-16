@@ -1,10 +1,10 @@
 import React from 'react';
-import ExampleComponent from './components/WeatherDisplay'; // Replace with the correct path
+import WeatherDisplay from './components/WeatherDisplay'; // Replace with the correct path
 
 function WeatherApp() {
   return (
     <div>
-      <h1>Your Mom's A$$</h1>
+      <h1>Weather App 3000</h1>
       <WeatherDisplay />
     </div>
   );
